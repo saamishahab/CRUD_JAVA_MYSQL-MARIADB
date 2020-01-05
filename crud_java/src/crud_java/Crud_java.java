@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package crud_java;
 
 /**
@@ -69,11 +65,9 @@ public class Crud_java {
                 case 4:
                     deleteInventory();
                     break;
-                case 5:
-                    System.exit(1);
-                break;
                 default:
                     System.out.println("Pilihan salah!");
+                    showMenu();
             }
         } catch (Exception e) 
         {
@@ -179,6 +173,7 @@ public class Crud_java {
             stm.execute(sql);
             
             System.out.println(id+" Telah Dihapus!");
+            System.out.println("");
             
             showInventory();
             showMenu();
