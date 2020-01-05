@@ -14,6 +14,7 @@ public class Crud_java {
      */
     public static Connection con;
     public static Statement stm;
+    public static Scanner sc;
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -36,7 +37,7 @@ public class Crud_java {
     static void showMenu() 
     {
         
-        Scanner sc = new Scanner (System.in);
+        sc = new Scanner (System.in);
         System.out.println("\n========= MENU UTAMA =========");
         System.out.println("1. Insert Inventory");
         System.out.println("2. Show Data");
@@ -77,15 +78,15 @@ public class Crud_java {
     
     static void insertInventory() {
         try {
-            Scanner sc1 = new Scanner (System.in);
+            sc = new Scanner (System.in);
             System.out.print("Kode: ");
-            String kode = sc1.nextLine().trim();
+            String kode = sc.nextLine().trim();
             System.out.print("Nama: ");
-            String nama = sc1.nextLine().trim();
+            String nama = sc.nextLine().trim();
             System.out.print("Qty: ");
-            String qty = sc1.nextLine().trim();
+            String qty = sc.nextLine().trim();
             System.out.print("Harga: ");
-            String harga = sc1.nextLine().trim();
+            String harga = sc.nextLine().trim();
             
             int total = Integer.valueOf(harga) * Integer.valueOf(qty);
                 
@@ -132,17 +133,17 @@ public class Crud_java {
     static void updateInventory() {
         
         try {
-            Scanner sc1 = new Scanner (System.in);
+            sc = new Scanner (System.in);
             System.out.print("Masukkan ID item yang ingin di update: ");
-            String id = sc1.nextLine().trim();
+            String id = sc.nextLine().trim();
             System.out.print("Kode: ");
-            String kode = sc1.nextLine().trim();
+            String kode = sc.nextLine().trim();
             System.out.print("Nama: ");
-            String nama = sc1.nextLine().trim();
+            String nama = sc.nextLine().trim();
             System.out.print("Qty: ");
-            String qty = sc1.nextLine().trim();
+            String qty = sc.nextLine().trim();
             System.out.print("Harga: ");
-            String harga = sc1.nextLine().trim();
+            String harga = sc.nextLine().trim();
             
             int total = Integer.valueOf(harga) * Integer.valueOf(qty);
                 
@@ -164,9 +165,9 @@ public class Crud_java {
     static void deleteInventory() {
         
         try {
-            Scanner sc1 = new Scanner (System.in);
+            sc = new Scanner (System.in);
             System.out.print("Masukkan ID item yang ingin di hapus: ");
-            String id = sc1.nextLine().trim();
+            String id = sc.nextLine().trim();
             String sql = "delete from tbl_item where id="+id;
             sql = String.format(sql);
 
