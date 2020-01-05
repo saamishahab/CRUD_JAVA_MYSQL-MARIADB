@@ -14,7 +14,6 @@ public class Crud_java {
      */
     public static Connection con;
     public static Statement stm;
-    public static Scanner sc = new Scanner (System.in);
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -36,7 +35,8 @@ public class Crud_java {
     
     static void showMenu() 
     {
-//        Scanner sc = new Scanner (System.in);
+        
+        Scanner sc = new Scanner (System.in);
         System.out.println("\n========= MENU UTAMA =========");
         System.out.println("1. Insert Inventory");
         System.out.println("2. Show Data");
